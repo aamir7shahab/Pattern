@@ -1,7 +1,7 @@
 # uc1 (User need to enter a valid First Name)
 read -p "Enter first name: " fname
 
-pat1="^[A-Z][a-z0-9]{3,}$"
+pat1="^[A-Z][a-z0-9]{2,}$"
 
 if [[ $fname =~ $pat1 ]]; then
 	echo "First name valid."
@@ -10,9 +10,9 @@ else
 fi
 
 # uc2 (User need to enter a valid Last Name)
-read -p "Enter first name: " lname
+read -p "Enter flast name: " lname
 
-pat2="^[A-Z][a-z0-9]{3,}$"
+pat2="^[A-Z][a-z0-9]{2,}$"
 
 if [[ $lname =~ $pat2 ]]; then
 	echo "Last name valid."
@@ -29,4 +29,15 @@ if [[ $email =~ $pat3 ]]; then
 	echo "Email valid."
 else
 	echo "Email invalid."
+fi
+
+# uc4 (User need to enter a valid mobile num)
+read -p "Enter mobile number: " mobile
+
+pat4="^[1-9][0-9]{0,2}[ ][1-9][0-9]{9}$"
+
+if [[ $mobile =~ $pat4 ]]; then
+	echo "Mobile num valid."
+else
+	echo "Mobile num invalid."
 fi
